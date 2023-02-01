@@ -9,6 +9,7 @@ const getAllUser = async () => {
     console.log(result);
   } catch (err) {
     console.log(err);
+    console.log("err");
   }
 };
 
@@ -22,6 +23,7 @@ const conection = async () => {
     console.log("modo corto");
     console.log(result);
   } catch (err) {
+    console.log("err");
     // ... error checks
   }
 };
