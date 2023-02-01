@@ -5,6 +5,7 @@ const getAllUser = async () => {
   try {
     let pool = await sql.connect(sqlConfig);
     let result = await pool.query`select * from dbo.USERS`;
+    console.log("modo largo");
     console.log(result);
   } catch (err) {
     console.log(err);
@@ -18,6 +19,7 @@ const conection = async () => {
       "Server=PC-ALANNY,1433;Database=Web3;User Id=alanny;Password=root;Encrypt=false"
     );
     const result = await sql.query`select * from dbo.USERS`;
+    console.log("modo corto");
     console.log(result);
   } catch (err) {
     // ... error checks
