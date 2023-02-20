@@ -16,8 +16,13 @@ const getAllUser = async () => {
 const conection = async () => {
   try {
     // make sure that any items are correctly URL encoded in the connection string
+    // PC
+    // await sql.connect(
+    //   "Server=PC-ALANNY,1433;Database=Web3;User Id=alanny;Password=root;Encrypt=false"
+    // );
+    // Laptop
     await sql.connect(
-      "Server=PC-ALANNY,1433;Database=Web3;User Id=alanny;Password=root;Encrypt=false"
+      "Server=LPC-ALANNY,1433;Database=Web3;User Id=sa;Password=root;Encrypt=false"
     );
     const result = await sql.query`select * from dbo.USERS`;
     console.log("modo corto");
